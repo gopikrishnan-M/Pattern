@@ -339,10 +339,42 @@ public class PatternMain {
         }
 
     }
+    //starts from one and increases to n value
+    public static void squareDistantIncreasing(){
+        for (int row = 1; row <=2*n-1; row++) {
+            for (int col = 1; col <=2*n-1 ; col++) {
+                int num=Math.min(Math.min(row,col),Math.min(2*n-row,2*n-col));
+                System.out.print(num+"  ");
+            }
+            System.out.println();
 
+        }
+    }
+    //starts from n and decreases to 1
+    public static void squareDistantDecreasing(){
+        for(int row=1;row<=2*n-1;row++){
+            for(int col=1;col<=2*n-1;col++){
+                int num=n+1-(Math.min(Math.min(row,col),Math.min(2*n-row,2*n-col)));
+                System.out.print(num + "  ");
+            }
+            System.out.println();
+        }
+    }
+
+    //starts form 2n-1 and decreases to n
+    public static void squareDistantDecreasing2(){
+        for (int row = 1; row <=2*n-1; row++) {
+            for (int col = 1; col <=2*n-1 ; col++) {
+                int num=Math.max(Math.max(row,col),Math.max(2*n-row,2*n-col));
+                System.out.print(num+"  ");
+            }
+            System.out.println();
+
+        }
+    }
     public static void main(String[] args) {
-        diamondV();
-        // do distant square problem
+        squareDistantDecreasing();
+
     }
 
 }
