@@ -304,7 +304,7 @@ public class PatternMain {
             pascalz(row,n);
         }
     }
-    public static void pascalz(int row,int n){
+    private static void pascalz(int row,int n){
         for (int spaces =1; spaces<=n-row; spaces++) {
             System.out.print(" ");
         }
@@ -373,7 +373,7 @@ public class PatternMain {
         }
     }
     public static void main(String[] args) {
-        squareDistantDecreasing();
+        diamondV();
 
     }
 
